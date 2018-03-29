@@ -1,0 +1,77 @@
+
+.navbar-default {
+  border: none;
+}
+
+.headerbar .container-fluid {
+  background-color: #4193d4;
+}
+
+.headerbar .navbar-brand {
+  color: #ffffff;
+}
+
+.headerbar .navbar-text {
+  color: #ffffff;
+  padding-left: 0;
+}
+
+.footerbar .container-fluid {
+  background-color: #263951;
+}
+
+.footerbar .btn-link {
+  color: #3e99e1;
+}
+
+.footerbar .btn-link:hover, .footerbar .btn-link:focus {
+  color: #387cb3;
+  text-decoration: none;
+  outline: none;
+}
+
+.footerbar .btn .glyphicon {
+  font-size: 24px;
+  top: 4px;
+}
+
+.footerbar .btn .glyphicon-ex {
+  font-size: 30px;
+  top: 2px;
+}
+
+button .flat {
+  border: 0;
+  background: none;
+}
+
+.textarea-flat {
+  border: none;
+  border-radius: none;
+  background-color: #1e2f42;
+  color: #ffffff;
+}
+
+.content {
+  background-color: #1e2f42;
+  color: #ffffff;
+}
+
+.container {
+  position: relative;
+  height: calc(100vh - 106px);
+}
+
+.col-md-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form-control-static {
+  padding: 6px 12px;
+}
+
+.control-label {
+  color: #569cd6;
+  font-weight: 0;
+}
