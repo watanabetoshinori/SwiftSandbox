@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 
 //app.use(bodyParser.json());
 
-app.get('/version', function(req, res) {
+app.get('/swift/version', function(req, res) {
   exec('swift -version', function(err, stdout, stderr) {
     res.header('Access-Control-Allow-Origin', '*');
     if (stderr) {
@@ -23,7 +23,7 @@ app.get('/version', function(req, res) {
   });
 })
 
-app.post('/run', function(req, res) {
+app.post('/swift/run', function(req, res) {
   var uuid = req.body.uuid
   var code = req.body.code
   var input = req.body.input

@@ -45,7 +45,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3001/version')
+    fetch('/swift/version')
     .then((res) => res.text())
     .then((text) => this.setState({ output: text }))
     .catch((error) => this.setState({ output: error.message }));
@@ -78,7 +78,7 @@ class App extends Component {
                + "&" + 
                "input=" + encodeURIComponent(this.state.input)
 
-    fetch('http://localhost:3001/run', {
+    fetch('/swift/run', {
       method: 'post',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8' },
       body: data
