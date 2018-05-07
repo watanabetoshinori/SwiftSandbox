@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import './App.css';
 
 import uuidv4 from 'uuid/v4';
+import {HotKeys} from 'react-hotkeys';
 
 import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
@@ -42,6 +43,20 @@ class App extends Component {
 
     this.newDidTappedHandler = this.newDidTapped.bind(this);
     this.runDidTappedHandler = this.runDidTapped.bind(this);
+
+    this.keyMap = {
+      new: 'command+shift+n',
+      run: 'command+shift+r',
+    };
+    
+    this.handlers = {
+      'new': (event) => {
+        this.newDidTappedHandler();
+      },
+      'run': (event) => {
+        this.runDidTappedHandler();
+      }
+    };
   }
 
   componentDidMount() {
@@ -110,10 +125,12 @@ class App extends Component {
         <Grid fluid={true} className="content">
           <Row className="show-grid">
             <Col md={6} className="container">
+              <HotKeys keyMap={this.keyMap} handlers={this.handlers}>
               <Editor 
                 code={this.state.code}
                 codeDidChangeHandler={this.codeDidChangeHandler}
               />
+              </HotKeys>
             </Col>
             <Col md={6}>
               <div style={{ padding: 15 }}>

@@ -8,6 +8,7 @@
     "react-bootstrap": "^0.32.1",
     "react-codemirror2": "^5.0.1",
     "react-dom": "^16.2.0",
+    "react-hotkeys": "^1.1.4",
     "react-scripts": "1.1.1",
     "uuid": "^3.2.1"
   },

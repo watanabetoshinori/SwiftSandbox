@@ -38,10 +38,11 @@ class Settings extends React.Component {
           <Modal.Title>Settings</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Not implemented</h4>
-          <p>
-            Sorry, settings screen is not implemented :x
-          </p>
+          <h4>Shortcuts</h4>
+          <ul>
+            <li>⇧⌘N : New</li>
+            <li>⇧⌘R : Run</li>
+          </ul>
         </Modal.Body>
         <Modal.Footer>
         </Modal.Footer>
