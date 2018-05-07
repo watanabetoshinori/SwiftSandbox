@@ -45,10 +45,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('/swift/version')
-    .then((res) => res.text())
-    .then((text) => this.setState({ output: text }))
-    .catch((error) => this.setState({ output: error.message }));
+    this.showSwiftVersion()
   }
 
   // Handling Events
@@ -58,23 +55,25 @@ class App extends Component {
     this.setState({ input: e.target.value });
   }
 
-  codeDidChange(newValue, e) {
+  codeDidChange(editor, data, newValue) {
     sessionStorage.setItem('code', newValue);
-    this.setState({ code: newValue });
   }
 
   newDidTapped(e) {
     sessionStorage.removeItem('code');
     sessionStorage.removeItem('input');
     this.setState({ code: kInitialCode, input: '', output: '' });
+    this.showSwiftVersion()
   }
 
   runDidTapped(e) {
+    const code = sessionStorage.getItem('code');
+
     this.setState({ output: '' });
 
     let data = "uuid=" + encodeURIComponent(this.state.uuid)
                + "&" + 
-               "code=" + encodeURIComponent(this.state.code)
+               "code=" + encodeURIComponent(code)
                + "&" + 
                "input=" + encodeURIComponent(this.state.input)
 
@@ -83,6 +82,13 @@ class App extends Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8' },
       body: data
     })
+    .then((res) => res.text())
+    .then((text) => this.setState({ output: text }))
+    .catch((error) => this.setState({ output: error.message }));
+  }
+
+  showSwiftVersion() {
+    fetch('/swift/version')
     .then((res) => res.text())
     .then((text) => this.setState({ output: text }))
     .catch((error) => this.setState({ output: error.message }));

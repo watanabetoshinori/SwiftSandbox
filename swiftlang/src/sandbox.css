@@ -1,0 +1,46 @@
+.cm-s-sandbox.CodeMirror {
+  background-color: rgba(20, 35, 50, 1);
+  color: #fff;
+  height: calc(100vh - 120px);
+}
+
+.cm-s-sandbox .CodeMirror-gutters {
+  background: rgba(30, 47, 66, 1);
+  color: #fff;
+  border: none;
+}
+.cm-s-sandbox .CodeMirror-guttermarker, .cm-s-sandbox .CodeMirror-guttermarker-subtle, .cm-s-sandbox .CodeMirror-linenumber { color: rgba(80, 100, 130, 1); }
+.cm-s-sandbox .CodeMirror-cursor { border-left: 1px solid #f8f8f0; }
+.cm-s-sandbox div.CodeMirror-selected { background: rgba(255, 255, 255, 0.15); }
+.cm-s-sandbox.CodeMirror-focused div.CodeMirror-selected { background: rgba(255, 255, 255, 0.10); }
+.cm-s-sandbox .CodeMirror-line::selection, .cm-s-sandbox .CodeMirror-line > span::selection, .cm-s-sandbox .CodeMirror-line > span > span::selection { background: rgba(255, 255, 255, 0.10); }
+.cm-s-sandbox .CodeMirror-line::-moz-selection, .cm-s-sandbox .CodeMirror-line > span::-moz-selection, .cm-s-sandbox .CodeMirror-line > span > span::-moz-selection { background: rgba(255, 255, 255, 0.10); }
+
+.cm-s-sandbox .CodeMirror-activeline-background { background: rgba(0, 0, 0, 0); }
+.cm-s-sandbox .cm-keyword { color: rgba(75, 175, 245, 1); }
+.cm-s-sandbox .cm-operator { color: rgba(75, 175, 245, 1); }
+.cm-s-sandbox .cm-variable-2 { color: #fff; }
+.cm-s-sandbox .cm-variable-3, .cm-s-sandbox .cm-type { color: #59cdad; }
+.cm-s-sandbox .cm-builtin { color: #fff; }
+.cm-s-sandbox .cm-atom { color: #fff; }
+.cm-s-sandbox .cm-number { color: #59cdad; }
+.cm-s-sandbox .cm-def { color: #fff; }
+.cm-s-sandbox .cm-string { color: rgba(105, 115, 240, 1); }
+.cm-s-sandbox .cm-string-2 { color: rgba(105, 115, 240, 1); }
+.cm-s-sandbox .cm-comment { color: #345f95; }
+.cm-s-sandbox .cm-variable { color: #fff; }
+.cm-s-sandbox .cm-tag { color: #fff; }
+.cm-s-sandbox .cm-meta { color: #fff; }
+.cm-s-sandbox .cm-attribute { color: #fff; }
+.cm-s-sandbox .cm-property { color: #fff; }
+.cm-s-sandbox .cm-qualifier { color: #fff; }
+.cm-s-sandbox .cm-variable-3, .cm-s-sandbox .cm-type { color: #fff; }
+.cm-s-sandbox .cm-tag { color: #fff; }
+.cm-s-sandbox .cm-error {
+  color: rgba(255, 255, 255, 1.0);
+  background-color: #EC5F67;
+}
+.cm-s-sandbox .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
